@@ -12,7 +12,6 @@
     "homepage": "https://github.com/ashleighsims/companies-house-api-wrapper",
     "keywords": ["Laravel", "Standalone", "Wrapper", "Companies House", "Companies House API", "CompaniesHouseApiWrapper"],
     "require": {
-        "illuminate/support": "~5|~6",
         "guzzlehttp/guzzle": "^6.5"
     },
     "require-dev": {
