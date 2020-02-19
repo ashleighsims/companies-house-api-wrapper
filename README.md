@@ -21,11 +21,26 @@ $ composer require ashleighsims/companies-house-api-wrapper
 
 ### Laravel
 
-If you're using this package in Laravel auto discovery has been enabled so you should be able to hit the ground running.
+If you're using this package in Laravel auto discovery has been enabled so you should be able to hit the ground running (when using Laravel 5.5 and beyond).
+
+if you aren't using Laravel 5.5 and above you will need to manually register some bits...
+
+Register the provider in the app.php file:
+
+```php
+AshleighSims\CompaniesHouseApiWrapper\Laravel\CompaniesHouseApiWrapperServiceProvider::class
+```
+
+Optionally register the Facade:
+
+```php
+'GetAddress' => AshleighSims\CompaniesHouseApiWrapper\Laravel\CompaniesHouseApiWrapperServiceProvider::class
+```
 
 Please ensure you've added the below environment variables to your `.env` file before starting.
 
 #### Environment Variables
+
 Add the following environment variables to your .env file.
 ```dotenv
 COMPANIES_HOUSE_API_BASE_URL="https://api.companieshouse.gov.uk/"
