@@ -1,0 +1,44 @@
+{
+    "name": "ashleighsims/companies-house-api-wrapper",
+    "description": "Wrapper for the Companies House API. Covering all endpoints available to developers.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ashleigh Sims",
+            "email": "sims@ashleighsims.co.uk",
+            "homepage": "http://www.ashleighsims.co.uk"
+        }
+    ],
+    "homepage": "https://github.com/ashleighsims/companies-house-api-wrapper",
+    "keywords": ["Laravel", "Standalone", "Wrapper", "Companies House", "Companies House API", "CompaniesHouseApiWrapper"],
+    "require": {
+        "illuminate/support": "~5|~6",
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3|~4",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AshleighSims\\CompaniesHouseApiWrapper\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AshleighSims\\CompaniesHouseApiWrapper\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AshleighSims\\CompaniesHouseApiWrapper\\Laravel\\CompaniesHouseApiWrapperServiceProvider"
+            ],
+            "aliases": {
+                "CompaniesHouseApiWrapper": "AshleighSims\\CompaniesHouseApiWrapper\\Laravel\\Facades\\CompaniesHouseApiWrapper"
+            }
+        }
+    }
+}
