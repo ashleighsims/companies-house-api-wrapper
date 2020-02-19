@@ -84,7 +84,7 @@ abstract class BaseRequest
      * @param array $options
      * @return array
      */
-    public function request(string $method, string $uri, array $options = []) : array
+    protected function request(string $method, string $uri, array $options = []) : array
     {
         $options = $this->setApiKey($options);
 
